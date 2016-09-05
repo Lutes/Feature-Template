@@ -76,5 +76,5 @@ with open("index.html", "a") as myfile:
 		myfile.write("\t\t\t</p>\n")
 	myfile.write("\t\t<div>\n")
 	
-	#CLOSE BODY
+#CLOSE BODY
 	myfile.write("\t</body>\n</html>")

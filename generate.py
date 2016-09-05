@@ -24,15 +24,14 @@ with open("article.txt", "r") as article:
 			paragraphs.append(content[x])
 
 with open("index.html", "a") as myfile:
-	
 	#HEADER
 	myfile.write("<!DOCTYPE html>\n<html>\n\t<head>\n");
 	myfile.write("\t\t<title>" + title + " | McGill Tribune</title>\n");
 	myfile.write("\t\t<meta property=\"og:title\" content=\"" + title + " | McGill Tribune\"/>\n");
 
 	#META TAGS
-	myfile.write("\t\t<meta property=\"og:image\" content=\"" + headImageUrl + "\">\"\n");
-	myfile.write("\t\t<meta property=\"og:description\" content=\"" + subtitle  + "\"/>\"\n");
+	myfile.write("\t\t<meta property=\"og:image\" content=\"" + headImageUrl + "\">\n");
+	myfile.write("\t\t<meta property=\"og:description\" content=\"" + subtitle  + "\"/>\n");
 	myfile.write("\t\t<meta name=\"author\" content=\"The McGill Tribune\">\n");
 	myfile.write("\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
 
@@ -55,18 +54,27 @@ with open("index.html", "a") as myfile:
 		myfile.write("\t\t<img  class='tribune-logo'/>\n");
 	else :
 		myfile.write("\t\t<img class='tribuneLogo'/>\n");
-	myfile.write("\t\t<img class='header-image' src='" + headImageUrl + "'/>\n");
-	myfile.write("\t\t<h1 class='title'>" + title + "</h1>\n");
-	myfile.write("\t\t<h3 class='subtitle'>" + subtitle + "</h3>\n");
-	myfile.write("\t\t<h5 class='byline'>By " + author +"   " + date + "</h5>\n");
+	myfile.write("\t\t<div class='image'>\n");
+	myfile.write("\t\t\t<img class='header-image' src='" + headImageUrl + "'/>\n\t\t</div>\n");
+
+	#STORY META
+	myfile.write("\t\t<div class='story-meta'>\n")
+	myfile.write("\t\t\t<h1 class='title'>" + title + "</h1>\n");
+	myfile.write("\t\t\t<h3 class='subtitle'>" + subtitle + "</h3>\n");
+	myfile.write("\t\t\t<h5 class='byline'>By " + author +"   " + date + "</h5>\n\t\t</div>\n");
+	
+	#IMAGE CREDIT
 	myfile.write("\t\t<p class='header-image-sentance'>\n\t\t\t" + headImageSentence)
 	myfile.write("\n\t\t\t<i class='header-image-credit'>" + headImageCredit + "</i>\n")
 	myfile.write("\t\t</p>\n")
 
+	#CONTENT
+	myfile.write("\t\t<div class='content-wrapper'>\n");
 	for i in range(0, len(paragraphs)):
-		myfile.write("\t\t<p class='content-paragraph'>\n")
-		myfile.write("\t\t\t" + paragraphs[i] + "\n")
-		myfile.write("\t\t</p>\n")
-
+		myfile.write("\t\t\t<p class='content-paragraph'>\n")
+		myfile.write("\t\t\t\t" + paragraphs[i] + "\n")
+		myfile.write("\t\t\t</p>\n")
+	myfile.write("\t\t<div>\n")
+	
 	#CLOSE BODY
 	myfile.write("\t</body>\n</html>")

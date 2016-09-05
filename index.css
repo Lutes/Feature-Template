@@ -1,0 +1,65 @@
+html, body{
+	margin: 0;
+	max-width: 100%;
+    overflow-x: hidden;
+	font-family: 'PT Sans Narrow', serif;
+}
+
+.tribune-logo{
+	position: absolute;
+}
+
+.image{
+	position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+    cursor: auto;
+}
+
+.header-image{
+	margin-top: -439px;
+	width: 100%;
+}
+
+
+.story-meta{
+	position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 50px 0 70px 50px;
+	color: white;
+}
+
+.title{
+	font-size: 70px;
+	margin-bottom: 10px;
+}
+
+.subtitle{}
+
+.byline{}
+
+.header-image-sentance{
+	position: relative;
+    bottom: 50px;
+    float: right;
+    padding-right: 15px;
+    color: #666;
+}
+
+.header-image-credit{
+	color: #999;
+}
+
+.content-wrapper{
+    padding-left: 22%;
+    padding-right: 33%;
+}
+
+.content-paragraph{
+
+}

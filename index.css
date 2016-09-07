@@ -7,6 +7,11 @@ html, body{
 
 .tribune-logo{
 	position: absolute;
+    z-index: 3;
+    height: 4vh;
+    text-align: inherit;
+    left: 50pc;
+    top: 16px;
 }
 
 .image{
@@ -61,5 +66,58 @@ html, body{
 }
 
 .content-paragraph{
+}
 
+
+/*HALF SCREEN VIEW*/
+@media (max-width: 920px) {
+	.image{
+	    position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+	    margin-bottom: 0;
+	    cursor: auto;
+	}
+
+	.header-image{
+	    height: 1385px;
+	    width: 946px;
+	    max-width: none;
+	    margin-left: -20.5px;
+	}
+
+	.tribune-logo{
+		position: absolute;
+	    z-index: 3;
+	    height: 4vh;
+	    text-align: inherit;
+	    left: 20pc;
+	    top: 16px;
+	}
+}
+
+
+/*TABLET VIEW*/
+@media (max-width: 768px) {
+	.image{
+		position: relative;
+	    height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+	    margin-bottom: 40px;
+	    cursor: auto;
+	}
+}
+
+/*TABLET VIEW*/
+@media (max-width: 768px) {
+	.image{
+		position: relative;
+	    height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+	    margin-bottom: 40px;
+	    cursor: auto;
+	}
 }

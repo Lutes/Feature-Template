@@ -40,6 +40,7 @@ with open("index.html", "a") as myfile:
 	myfile.write("\t\t<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>\n");
 	myfile.write("\t\t<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>\n");
 	myfile.write("\t\t<link rel=\"stylesheet\"	href=\"index.css\">\n");
+	myfile.write("\t\t<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>\n");
 	myfile.write("\t\t<link rel=\"icon\" type=\"image/png\" href=\"http://mcgilltribune.com/wp-content/uploads/2015/09/favicon.ico\">\n");
 
 	#GOOGLE ANALYTICS
@@ -51,9 +52,9 @@ with open("index.html", "a") as myfile:
 	#PAGE TOP
 	#TODO Need a src for black and white. 
 	if((logoColor == 'Black')or(logoColor == 'black')):
-		myfile.write("\t\t<img  class='tribune-logo'/>\n");
+		myfile.write("\t\t<img class='tribune-logo' src='black_logo.png'/>\n");
 	else :
-		myfile.write("\t\t<img class='tribuneLogo'/>\n");
+		myfile.write("\t\t<img class='tribuneLogo' src='white_logo.png'/>\n");
 	myfile.write("\t\t<div class='image'>\n");
 	myfile.write("\t\t\t<img class='header-image' src='" + headImageUrl + "'/>\n\t\t</div>\n");
 
